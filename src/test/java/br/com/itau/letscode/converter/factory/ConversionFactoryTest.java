@@ -7,14 +7,18 @@ import org.junit.jupiter.api.*;
 class ConversionFactoryTest {
 
     static ConversionFactory conversionFactory;
+    static int invalidKey;
+    static int validKey;
 
     @BeforeAll
     static void setUp() {
         conversionFactory = new ConversionFactory();
+        invalidKey = 8;
+        validKey = 1;
     }
 
     @Test
-    void create() {
+    void createShouldConvertKeyToConvertWithValidation() {
         ConversionWithValidation dollar = conversionFactory.create(1);
         ConversionWithValidation euro = conversionFactory.create(2);
         ConversionWithValidation argentineanPeso = conversionFactory.create(3);
@@ -31,9 +35,16 @@ class ConversionFactoryTest {
     }
 
     @Test
-    void shouldThrownExceptionWhenInvalidKey() {
-        Assertions.assertThrows(IllegalArgumentException.class, () ->{
-            conversionFactory.create(7);
+    void createShouldThrownExceptionWhenInvalidKey() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            conversionFactory.create(invalidKey);
+        });
+    }
+
+    @Test
+    void createDoesNotThrownExceptionWhenValidKey() {
+        Assertions.assertDoesNotThrow( () -> {
+            conversionFactory.create(validKey);
         });
     }
 }
