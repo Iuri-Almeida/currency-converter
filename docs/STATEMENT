@@ -1,0 +1,71 @@
+Criação de software para conversão de moedas
+
+Manuela, uma operadora de câmbio, precisa de um software para auxiliar seu dia-a-dia para calcular os resultados das operações de câmbio que ela realiza para seus clientes. Atualmente, ela realiza as conversões manualmente a cada operação com o auxílio de uma calculadora, o que torna o processo suscetível a erros.
+Manuela trabalha com as seguintes moedas:
+
+- Moeda: Dólar
+- Cotação: R$ 1,00 = US$ 0,19
+- Taxa operacional: R$ 5,00 + 3%
+- IOF: 1,1%
+
+- Moeda: Euro
+- Cotação: R$ 1,00 = EUR 0,20
+- Taxa operacional: R$ 6,00
+- IOF: 1,1%
+
+- Moeda: Peso Argentino
+- Cotação: R$ 1,00 = ARS 26,24
+- Taxa operacionalR$ 2,50 + 1,5%
+- IOF: 1,1%
+
+- Moeda: Peso Chileno
+- Cotação: R$ 1,00 = CLP 174,17
+- Taxa operacional: R$ 10,00 + 2,5%
+- IOF: 1,1%
+
+
+Segundo as regras fornecidas por Manuela, um exemplo de operação de câmbio para alguém que deseja trocar R$ 100,00 por pesos argentinos:
+
+- R$ 100,00 -> (100,00 - [100 * 0,011 (IOF)] - [10,00 + 100,00 * 0,025 (taxa operacional)]) * 174,17 (cotação) = CLP 15048,28
+
+Manuela também comentou que algumas operações de câmbio são mais recorrentes que outras, ou seja: ela executa essas operações mais vezes do que outras. A ordem de recorrência das operações com as moedas é a seguinte:
+
+- Euro (35% das operações);
+- Dólar (30% das operações);
+- Peso Argentino (20% das operações);
+- Peso Chileno (15% das operações).
+
+Sendo assim, o que mais seria interessante para ela era que as operações de conversão fossem disponibilizadas de acordo com essa ordem de utilização.
+Manuela comentou também que provavelmente, será necessário adicionar em 1 ou 2 meses o suporte para conversão para libra esterlina e iene (moeda japonesa). Podem surgir mais moedas à medida que o software for utilizado.
+Manuela comentou que uma aplicação Console simples já resolve o seu problema. Se essa aplicação tivesse um fluxo para digitar o valor em reais, escolher uma moeda como destino e ela obter na saída o resultado do valor da taxa operacional, do IOF e o valor convertido, isso já seria excelente. Se o software puder ser “cíclico” (ou seja, não ser reiniciado a cada operação, permitindo o retorno automático para a entrada de valor em reais), seria praticamente perfeito. Seria como o fluxo abaixo:
+
+
+
+Digite o valor em reais (R$): 100,00
+Digite a moeda de destino:
+    1. Euro
+    2. Dólar
+    3. Peso Argentino
+    4. Peso Chileno
+
+    -> 4
+
+Valor em reais   -> R$ 100,00
+IOF              -> R$ 1,10
+Taxa de operação -> R$ 12,50
+—-----------------------------
+Total convertido -> CLP 15048,28
+
+
+
+Por fim, Manuela comentou que, se possível, seria interessante ter um histórico dos cálculos realizados. Esse histórico poderia ser reiniciado a cada vez que a aplicação fosse aberta, ou seja, não precisaria ser persistido. Porém, se necessário, ela prefere que isso seja entregue posteriormente, pois a automação das conversões a ajudaria mais (pode ser incluso nos backlogs e nas estimativas, mas não precisa ser implementado :) ).
+
+
+OUTPUTS ESPERADOS
+
+Os seguintes artefatos são esperados para a entrega desta atividade:
+
+    - Product Backlog, com estimativas de relevância e complexidade (de preferência, utilizar o planning poker como ferramenta de estimativa);
+    - Sprint Backlogs, com tasks e suas respectivas estimativas (de preferência, utilizar o planning poker como ferramenta de estimativa);
+    - Código da aplicação, seguindo os seguintes parâmetros:
+        . Aplicação de princípios de orientação a objetos e SOLID;
