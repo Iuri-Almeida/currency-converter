@@ -22,7 +22,14 @@ $ git clone https://github.com/Iuri-Almeida/currency-converter
 $ cd currency-converter
 
 $ java -jar currency-converter.jar
+
 ```
+
+[CLASS DIAGRAM]
+
+<div>
+<img src="https://i.imgur.com/ejx87xp.png" alt=" class diagram" width="1800"
+</div>
 
 
 ## Authors
