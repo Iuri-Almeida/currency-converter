@@ -3,7 +3,7 @@
 
 ## Description
 
-Console application to manage currency conversion. Please see the project [statement][statement] (pt-BR) for details.
+Console application to manage currency conversion. Please see the project [statement][statement] (pt-BR) for details. You can access our board on [Miro][miro] to see the Product and Spring Backlog.
 
 <div align="center">
 
@@ -48,6 +48,7 @@ This project is licensed under the terms of the MIT license - please see the [LI
 
 <!-- Links -->
 [statement]: https://github.com/Iuri-Almeida/currency-converter/blob/master/docs/STATEMENT
+[miro]: https://miro.com/app/board/uXjVPfq5h1g=/?share_link_id=393648865032
 [java-11]: https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html
 [author-1]: https://github.com/Iuri-Almeida/
 [author-2]: https://github.com/matheus-diefenthaeler/
